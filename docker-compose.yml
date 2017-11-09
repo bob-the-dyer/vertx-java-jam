@@ -10,8 +10,8 @@ services:
      - "4000:4000"
      - "1898:1898"
     depends_on:
-      - joker-mongo
-  joker-mongo:
+      - java-jam-mongo
+  java-jam-mongo:
     image: mongo
     ports:
      - "27017:27017"

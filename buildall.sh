@@ -14,7 +14,3 @@ cd ..
 cd persistor
 mvn clean install -P con
 cd ..
-
-cd hanode
-mvn clean install -P con
-cd ..

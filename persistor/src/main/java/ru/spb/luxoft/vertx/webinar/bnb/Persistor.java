@@ -1,4 +1,4 @@
-package ru.spb.luxoft.vertx.webinar.bnb;
+package ru.spb.luxoft.vertx.webinar.mvf;
 
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.eventbus.Message;

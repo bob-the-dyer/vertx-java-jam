@@ -1,4 +1,4 @@
-package ru.spb.luxoft.vertx.webinar.bnb;
+package ru.spb.luxoft.vertx.webinar.mvf;
 
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Vertx;

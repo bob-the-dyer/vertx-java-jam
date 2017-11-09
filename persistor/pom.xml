@@ -12,12 +12,12 @@
         <relativePath/>
     </parent>
 
-    <groupId>ru.spb.luxoft.webinar.bnb</groupId>
+    <groupId>ru.spb.luxoft.webinar.mvf</groupId>
     <artifactId>persistor</artifactId>
     <version>0.1</version>
 
     <properties>
-        <docker.image>bnb/persistor:${project.version}</docker.image>
+        <docker.image>mvf/persistor:${project.version}</docker.image>
         <vertx.version>3.2.1</vertx.version>
         <java.version>1.8</java.version>
     </properties>

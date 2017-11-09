@@ -5,27 +5,21 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ru.spb.luxoft.webinar.bnb</groupId>
+    <parent>
+        <groupId>ru.spb.luxoft.webinar.bnb</groupId>
+        <artifactId>main</artifactId>
+        <version>0.1</version>
+    </parent>
+
     <artifactId>consumer</artifactId>
     <version>0.1</version>
 
     <properties>
-        <vertx.version>3.2.1</vertx.version>
         <main.verticle>consumer.rb</main.verticle>
         <docker.image>bnb/consumer:${project.version}</docker.image>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-core</artifactId>
-            <version>${vertx.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-hazelcast</artifactId>
-            <version>${vertx.version}</version>
-        </dependency>
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-lang-ruby</artifactId>

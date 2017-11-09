@@ -5,7 +5,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ru.spb.luxoft.webinar.mvf</groupId>
+    <groupId>ru.spb.yandex.vertx.mvf</groupId>
     <artifactId>main</artifactId>
     <version>0.1</version>
     <packaging>pom</packaging>
@@ -165,6 +165,5 @@
             </build>
         </profile>
     </profiles>
-
 
 </project>

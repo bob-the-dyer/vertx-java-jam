@@ -1,4 +1,4 @@
-    Microservices with vertical flying-off with vert.x
+    Microservices with Vertical Flying-off (MVF) with vert.x 
 
 The goal is to show how to use vert.x to develop, deploy and maintain micro-services.
 To build project use: mvn clean package

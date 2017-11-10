@@ -6,7 +6,7 @@ var StaticHandler = require("vertx-web-js/static_handler");
 var router = Router.router(vertx);
 router.route("/eventbus/*").handler(
     SockJSHandler.create(vertx).bridge({
-        "outboundPermitteds": [
+        "outboundPermitted": [
             {"address": "story_topic"}
         ]
     }).handle);

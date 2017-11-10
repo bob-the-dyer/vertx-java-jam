@@ -5,15 +5,8 @@ ENV SPRING_BOOT_FILE persistor-0.1.jar
 # Set the location of the spring boot apps
 ENV BOOTAPPS_HOME /usr/bootapps
 
-# For boot2docker -Djava.rmi.server.hostname='192.168.99.100', for linux and native MAC -Djava.rmi.server.hostname='0.0.0.0'
-ENV REMOTE_JMX_OPTIONS -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.port=1898 -Dcom.sun.management.jmxremote.rmi.port=1898 -Djava.rmi.server.hostname='0.0.0.0'
-
 # Set hazelcast options
 ENV HAZELCAST_OPTIONS -Dhazelcast.max.no.heartbeat.seconds=10 -Dhazelcast.merge.first.run.delay.seconds=3 -Dhazelcast.merge.next.run.delay.seconds=3 -Dhazelcast.max.join.merge.target.seconds=5
-
-EXPOSE 4000
-
-EXPOSE 1898
 
 # Copy your fat jar to the container
 COPY ./bootapps $BOOTAPPS_HOME

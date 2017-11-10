@@ -8,7 +8,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.2.4.RELEASE</version>
+        <version>1.5.8.RELEASE</version>
         <relativePath/>
     </parent>
 
@@ -17,8 +17,9 @@
     <version>0.1</version>
 
     <properties>
+        <vertx.version.emb>3.5.0</vertx.version.emb>
+        <hazelcast.version.explicit>3.8.2</hazelcast.version.explicit>
         <docker.image>mvf/persistor:${project.version}</docker.image>
-        <vertx.version>3.5.0</vertx.version>
         <java.version>1.8</java.version>
     </properties>
 
@@ -30,17 +31,22 @@
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-core</artifactId>
-            <version>${vertx.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.vertx</groupId>
-            <artifactId>vertx-mongo-client</artifactId>
-            <version>${vertx.version}</version>
+            <version>${vertx.version.emb}</version>
         </dependency>
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-hazelcast</artifactId>
-            <version>${vertx.version}</version>
+            <version>${vertx.version.emb}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.hazelcast</groupId>
+            <artifactId>hazelcast</artifactId>
+            <version>${hazelcast.version.explicit}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-mongo-client</artifactId>
+            <version>${vertx.version.emb}</version>
         </dependency>
     </dependencies>
 
@@ -62,7 +68,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>1.2.4.RELEASE</version>
+                <version>1.5.2.RELEASE</version>
             </plugin>
         </plugins>
     </build>
@@ -144,9 +150,9 @@
                                         <argument>-p</argument>
                                         <argument>4000:4000</argument>
                                         <argument>--name</argument>
-                                        <argument>persistor-${project.version}</argument>
+                                        <argument>mvf-${project.artifactId}-${project.version}</argument>
                                         <argument>--link</argument>
-                                        <argument>joker-mongo</argument>
+                                        <argument>java-jam-mongo</argument>
                                         <argument>${docker.image}</argument>
                                     </arguments>
                                 </configuration>

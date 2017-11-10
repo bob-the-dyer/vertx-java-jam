@@ -22,10 +22,9 @@ To run all containers at once use: docker-compose up
  - Resume 
  
     Bonus topics
-- https://www.techempower.com/benchmarks/
-- HA, quorum
 - vert.x internals: event loop, worker pool, shared data, nio
-        
+- HA, quorum
+- https://www.techempower.com/benchmarks/
 
     Negative things to mention
  - hazelcast by default has timeouts and delays that should be configured for each particular case.    

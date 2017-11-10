@@ -39,7 +39,8 @@ To run all containers at once use: docker-compose up
     1. docker stop $(docker ps -a -q)
     2. docker rm $(docker ps -a -q)
  - To remove all none images use: docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
- - To run mongodb in docker container use: docker run -it --rm --name joker-mongo -p 27017:27017 mongo
+ - To run mongodb in docker container use: 
+      docker run -it --rm --name java-jam-mongo -p 27017:27017 mongo
  - To remove all images use:
     1.docker rm $(docker ps -a -q) 
     2.docker rmi $(docker images -q)

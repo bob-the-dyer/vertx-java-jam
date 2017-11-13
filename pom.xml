@@ -14,6 +14,7 @@
         <vertx.version>3.5.0</vertx.version>
         <main.verticle>noname.nolang</main.verticle>
         <docker.image>mvf/${project.artifactId}:${project.version}</docker.image>
+        <docker.run.custom.arg></docker.run.custom.arg>
     </properties>
 
     <modules>
@@ -139,7 +140,7 @@
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>exec-maven-plugin</artifactId>
-                        <version>1.6.0</version>
+                        <version>1.4.0</version>
                         <executions>
                             <execution>
                                 <id>run-in-docker</id>
@@ -153,6 +154,7 @@
                                         <argument>run</argument>
                                         <argument>--rm</argument>
                                         <argument>-i</argument>
+                                        <argument>${docker.run.custom.arg}</argument>
                                         <argument>--name</argument>
                                         <argument>mvf-${project.artifactId}-${project.version}</argument>
                                         <argument>${docker.image}</argument>

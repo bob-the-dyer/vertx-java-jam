@@ -16,6 +16,7 @@
 
     <properties>
         <main.verticle>web.js</main.verticle>
+        <docker.run.custom.arg>-p8080:8080</docker.run.custom.arg>
     </properties>
 
     <dependencies>
